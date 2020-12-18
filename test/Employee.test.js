@@ -12,8 +12,14 @@ test("Can set name via constructor arguments", () => {
 });
 
 test("Can set id via constructor argument", () => {
+  
+  // Arrange
   const testValue = 100;
+  
+  // Act
   const e = new Employee("Foo", testValue);
+  
+  // Assert
   expect(e.id).toBe(testValue);
 });
 

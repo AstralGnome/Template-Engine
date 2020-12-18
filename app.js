@@ -9,7 +9,10 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
-
+const Bob = new Manager("Bob", 5, "email.com", 7)
+const Steven = new Manager("Steven", 4, "email.com", 6)
+const employees = [Bob, Steven]
+fs.writeFileSync("employees.html", render(employees));
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
