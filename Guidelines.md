@@ -121,8 +121,7 @@ In addition to `Employee`'s properties and methods, `Intern` will also have:
 
 ### User input
 
-The project must prompt the user to build an engineering team. An engineering
-team consists of a manager, and any number of engineers and interns.
+The project must prompt the user to build an engineering team. An engineering team consists of a manager, and any number of engineers and interns.
 
 ### Roster output
 
