@@ -22,22 +22,22 @@ function managerInfo() {
     .prompt([
       {
         type: "input",
-        name: "manager",
+        name: "name",
         message: "Manager's name?",
       },
       {
         type: "input",
-        name: "manager",
+        name: "id",
         message: "Manager's ID?",
       },
       {
         type: "input",
-        name: "manager",
+        name: "email",
         message: "Manager's email?",
       },
       {
         type: "input",
-        name: "manager",
+        name: "phone",
         message: "Manager's office phone-number?",
       },
     ])
@@ -46,7 +46,7 @@ function managerInfo() {
         managerData.name,
         managerData.id,
         managerData.email,
-        managerData.officeNumber
+        managerData.phone
       );
 
       employeeList.push(newManager);
@@ -67,11 +67,18 @@ function questLoop() {
     ])
     .then((response) => {
       //If the selected employee is an engineer
-      engineerInfo();
+      if (response.questionLoop === "Engineer"){
+
+        engineerInfo();
+      }
       //Else if the selected employee is an intern
+      else if (response.questionLoop === "Intern"){
       internInfo();
+    }
       //Else
+      else {
       createHtmlFile();
+      }
     });
 }
 
@@ -81,22 +88,22 @@ function engineerInfo() {
     .prompt([
       {
         type: "input",
-        name: "engineer",
+        name: "name",
         message: "Engineer's name?",
       },
       {
         type: "input",
-        name: "engineer",
+        name: "id",
         message: "Engineer's ID?",
       },
       {
         type: "input",
-        name: "engineer",
+        name: "email",
         message: "Engineer's email?",
       },
       {
         type: "input",
-        name: "engineer",
+        name: "github",
         message: "Engineer's GitHub Username?",
       },
     ])
@@ -119,22 +126,22 @@ function internInfo() {
     .prompt([
       {
         type: "input",
-        name: "intern",
+        name: "name",
         message: "Intern's name?",
       },
       {
         type: "input",
-        name: "intern",
+        name: "id",
         message: "Intern's ID?",
       },
       {
         type: "input",
-        name: "intern",
+        name: "email",
         message: "Intern's email?",
       },
       {
         type: "input",
-        name: "intern",
+        name: "school",
         message: "Intern's school of record?",
       },
     ])
